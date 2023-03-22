@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <!-- tag de responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+          crossorigin="anonymous">
+    <title>Realizar uma nova reclamação</title>
+  </head>
+  <body class="text-center text-dark">
+    <h1>Central de Ouvidoria Prefeitura de Sorocaba</h1>
+    <img src="../imagens/brasao-prefeitura.png" 
+         title="Brasão a Prefeitura de Sorocaba">
+
+    <header>
+    </header>
+
+    <main>
+        <form class="p-3 mb-2 bg-warning text-dark">
+          <h2 style="vertical-align:middle; 
+                     margin:50px">Preencha os dados abaixo para realizar uma reclamação:</h2>
+          <div class="form-group" >
+            <label for="exampleInputEmail1">Nome Completo:</label>
+            <input  type="text" 
+                    class="form-control" 
+                    id="exampleInputEmail1" 
+                    aria-describedby="emailHelp" 
+                    placeholder="Nome Completo">
+          </div>
+
+          <div class="form-group" >
+            <label for="inputAddress">Endereço Completo:</label>
+            <input  type="text" 
+                    class="form-control" 
+                    id="exampleInputAddress" 
+                    aria-describedby="emailHelp" 
+                    placeholder="Avenida Dez, 100, Jardim Um, etc"
+                    required>
+            <div class="valid-feedback">Tudo certo!</div>
+            <div class="invalid-feedback">Por favor, informe um CEP válido.</div>
+          </div>
+
+          <div class="form-group" >
+            <label for="phone">Telefone:</label>
+            <input  type="tel" 
+                    class="form-control telephone" 
+                    id="phone"                     
+                    pattern="[0-9]{11}"
+                    aria-describedby="emailHelp"
+                    placeholder="(00) 0 0000 0000"
+                    data-mask="(99) 9 9999-9999"/>
+            <small>Formato: 15 9 0000 0000 (11 dígitos sem espaços)</small>
+          </div>
+
+          <div class="form-group" >
+            <label for="exampleInputEmail1">Reclamação:</label>
+            <input  type="text" 
+                    class="form-control" 
+                    id="exampleInputEmail1" 
+                    aria-describedby="emailHelp" 
+                    placeholder="A minha Reclamação é ..."
+                    required>
+            <small>Informe a Reclamação</small>
+          </div>          
+          <!-- <div class="form-group is-valid" >
+            <label for="inputEstado">Nome C</label>
+            <select id="inputEstado" class="form-control">
+              <option selected>Escolher...</option>
+              <option>Lazer e Cultura</option>
+            
+            </select>
+          </div> -->
+          <button type="submit" class="btn btn-danger">Enviar</button>
+        </form> 
+        
+    </main>
+
+    <footer>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">               
+                <div>
+                    <a href="../index.html">
+                        <img src="../imagens/voltar.png" 
+                            title="Retornar"
+                            width="50"
+                            style="vertical-align:middle; 
+                                    margin:0px;
+                                    color:yellow">
+                    </a>                   
+                </div>
+            </div>
+        </div>       
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
