@@ -1,6 +1,6 @@
 import app from "../app.js"
 import express from "express"
-import routerPessoa from "./pessoasRouter.js"
+import routerReclamacao from "./reclamacaoRouter.js"
 
 const routes = (app) => {
     app.route('/').get((req,res) => {
@@ -9,7 +9,7 @@ const routes = (app) => {
 
     app.use(
         express.json(),
-        routerPessoa
+        routerReclamacao
     )
 }
 

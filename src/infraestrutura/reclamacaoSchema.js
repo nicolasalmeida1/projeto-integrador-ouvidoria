@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const pessoaSchema = new mongoose.Schema({
+const reclamacaoSchema = new mongoose.Schema({
     id: { type: String},
     nomeCompleto: { type: String, required: false },
     endereçoCompleto: { type: String, required: true },
     telefone: { type: String, required: false },
-    reclamação: { type: String, required: true },
+    reclamacao: { type: String, required: true },
 })
 
-const pessoasRegistrada = mongoose.model('pessoa', pessoaSchema);
+const reclamacaoRegistrada = mongoose.model('reclamacao', reclamacaoSchema);
 
-export default pessoasRegistrada;
+export default reclamacaoRegistrada;
