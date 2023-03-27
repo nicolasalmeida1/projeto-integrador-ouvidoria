@@ -22,12 +22,13 @@
     </header>
 
     <main>
-        <form class="p-3 mb-2 bg-warning text-dark">
+        <form method='POST' action='/cadastrar-reclamacao' class="p-3 mb-2 bg-warning text-dark">
           <h2 style="vertical-align:middle; 
                      margin:50px">Preencha os dados abaixo para realizar uma reclamação:</h2>
           <div class="form-group" >
             <label for="exampleInputEmail1">Nome Completo:</label>
-            <input  type="text" 
+            <input  type="text"
+                    name="nome"
                     class="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
@@ -36,7 +37,8 @@
 
           <div class="form-group" >
             <label for="inputAddress">Endereço Completo:</label>
-            <input  type="text" 
+            <input  type="text"
+                    name="endereco"
                     class="form-control" 
                     id="exampleInputAddress" 
                     aria-describedby="emailHelp" 
@@ -48,7 +50,8 @@
 
           <div class="form-group" >
             <label for="phone">Telefone:</label>
-            <input  type="tel" 
+            <input  type="tel"
+                    name="telefone"
                     class="form-control telephone" 
                     id="phone"                     
                     pattern="[0-9]{11}"
@@ -60,7 +63,8 @@
 
           <div class="form-group" >
             <label for="exampleInputEmail1">Reclamação:</label>
-            <input  type="text" 
+            <input  type="text"
+                    name="reclamacao" 
                     class="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 

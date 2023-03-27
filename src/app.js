@@ -1,9 +1,16 @@
 import express from "express";
 import db from "./config/dbConnect.js"
 import routes from "./routers/index.js"
+import ejs from 'ejs'
+import path from 'path'
+import bodyParser from 'body-parser'
 
 const app = express();
-app.use(express.json());
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 routes(app);
 
