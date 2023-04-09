@@ -19,5 +19,4 @@ db.once("open", ()=>{
     console.log("A conexão com o banco de dados foi estabelecida com sucesso!")
 });
 
-
 export default app;
