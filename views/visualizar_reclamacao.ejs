@@ -22,6 +22,30 @@
     </header>
 
     <main>
+      <div class="row">
+        <div class="col-12">
+            <table class="table table-striped table-hover table-local">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Relcamação</tr>
+                    </tr>
+                </thead>
+                <tbody class="tbody-local">
+                  <% for (var i = 0; i < reclamacoes.length; i++) { %>
+                    <tr>
+                      <td><%= reclamacoes[i].nomeCompleto %></td>
+                      <td><%= reclamacoes[i].enderecoCompleto %></td>
+                      <td><%= reclamacoes[i].telefone %></td>
+                      <td><%= reclamacoes[i].reclamacao %></td>
+                    </tr>
+                  <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
     </main>
 
     <footer>

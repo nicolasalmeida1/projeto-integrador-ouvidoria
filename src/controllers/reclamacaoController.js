@@ -10,7 +10,7 @@ class ReclamacaoController{
     static inserirReclamacao = (req, res) => {
         let reclamacao = new reclamacaoRegistrada({
             nomeCompleto: req.body.nome,
-            endereçoCompleto: req.body.endereco,
+            enderecoCompleto: req.body.endereco,
             telefone: req.body.telefone,
             reclamacao: req.body.reclamacao,
         });
@@ -21,7 +21,7 @@ class ReclamacaoController{
             if(err){
                 res.status(500).send({message: `Erro ao tentar cadastrar uma nova reclamação: ${err.message}`});
             }else{
-                res.status(200).send(reclamacao.toJSON());
+                res.status(200).send('reclamação recebida com sucesso');
             }
         })
     }
@@ -35,7 +35,14 @@ class ReclamacaoController{
     }
 
     static visualizarReclamacao = (req, res) => {
-        res.render('visualizar_reclamacao')
+        reclamacaoRegistrada.find({}, (err, reclamacoes) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(reclamacoes)
+                res.render('visualizar_reclamacao', { reclamacoes: reclamacoes})
+            }
+        })
     }
 }
 
