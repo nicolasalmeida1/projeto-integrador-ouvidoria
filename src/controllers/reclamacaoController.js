@@ -21,7 +21,8 @@ class ReclamacaoController{
             if(err){
                 res.status(500).send({message: `Erro ao tentar cadastrar uma nova reclamação: ${err.message}`});
             }else{
-                res.status(200).send('reclamação recebida com sucesso');
+                res.status(200).redirect('/paginaReclamacaoEnviada')
+                // res.status(200).send('reclamação recebida com sucesso');
             }
         })
     }
@@ -32,6 +33,10 @@ class ReclamacaoController{
 
     static paginaReclamacao = (req, res) => {
         res.render('realizar_reclamacao');
+    }
+
+    static paginaReclamacaoEnviada = (req, res) => {
+        res.render('reclamacao_enviada');
     }
 
     static visualizarReclamacao = (req, res) => {

@@ -1,0 +1,9 @@
+1 - Instalar :
+
+npm install nodemon
+npm install mongodb
+npm install
+
+2 - acessar o arquivo `projeto-integrador-ouvidoria\src\config\dbConnect.js` e  adicionar sua conecção do banco de dados criada em https://cloud.mongodb.com/ seguindo os exemplos que ja existem
+
+3 - rodar com `npm run dev` e depois acessar o link http://localhost:3000/
