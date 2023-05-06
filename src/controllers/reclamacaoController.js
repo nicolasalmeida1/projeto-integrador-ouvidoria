@@ -1,4 +1,5 @@
 import reclamacaoRegistrada from "../infraestrutura/reclamacaoSchema.js";
+import dateTime from '../helper/formatDate.js'
 
 class ReclamacaoController{
     static listarReclamacoes = (req, res) => {
@@ -11,6 +12,7 @@ class ReclamacaoController{
         let reclamacao = new reclamacaoRegistrada({
             nomeCompleto: req.body.nome,
             enderecoCompleto: req.body.endereco,
+            data: dateTime(),
             telefone: req.body.telefone,
             reclamacao: req.body.reclamacao,
         });
@@ -22,7 +24,6 @@ class ReclamacaoController{
                 res.status(500).send({message: `Erro ao tentar cadastrar uma nova reclamação: ${err.message}`});
             }else{
                 res.status(200).redirect('/paginaReclamacaoEnviada')
-                // res.status(200).send('reclamação recebida com sucesso');
             }
         })
     }
